@@ -12,4 +12,9 @@
     width: auto;
     height: auto;
     background-color: cyan;
+    cursor: pointer;
+}
+
+.options:hover{
+    font-size: 30px;
 }
