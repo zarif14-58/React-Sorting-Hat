@@ -11,7 +11,7 @@ class Header extends Component {
     render(){
         return(
             <React.Fragment>
-                <h1 className="display-2 text-center">Sorting Hat Quiz</h1>
+                <h1 className="display-2 text-center text-warning">Sorting Hat Quiz</h1>
             </React.Fragment>
         )
     }

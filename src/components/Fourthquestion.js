@@ -10,7 +10,11 @@ class Fourth extends Component {
             fourthOpt: "",
             firstOptFourth: this.props.location.state.firstOpt,
             secondOptFourth: this.props.location.state.secondOpt,
-            thirdOptFourth: this.props.location.state.thirdOpt
+            thirdOptFourth: this.props.location.state.thirdOpt,
+            firstOptCol: "cyan",
+            secondOptCol: "cyan",
+            thirdOptCol: "cyan",
+            fourthOptCol: "cyan"
         }
         this.selectOptTwo = this.selectOptTwo.bind(this)
         this.selectOptOne = this.selectOptOne.bind(this)
@@ -20,25 +24,41 @@ class Fourth extends Component {
 
     selectOptOne(){
         this.setState({
-            fourthOpt: "Hunger"
+            fourthOpt: "Hunger",
+            firstOptCol: "#3399ff",
+            secondOptCol: "cyan",
+            thirdOptCol: "cyan",
+            fourthOptCol: "cyan"
         })
     }
 
     selectOptTwo(){
         this.setState({
-            fourthOpt: "Cold"
+            fourthOpt: "Cold",
+            firstOptCol: "cyan",
+            secondOptCol: "#3399ff",
+            thirdOptCol: "cyan",
+            fourthOptCol: "cyan"
         })
     }
 
     selectOptThree(){
         this.setState({
-            fourthOpt: "Boredom"
+            fourthOpt: "Boredom",
+            firstOptCol: "cyan",
+            secondOptCol: "cyan",
+            thirdOptCol: "#3399ff",
+            fourthOptCol: "cyan"
         })
     }
 
     selectOptFour(){
         this.setState({
-            fourthOpt: "Loneliness"
+            fourthOpt: "Loneliness",
+            firstOptCol: "cyan",
+            secondOptCol: "cyan",
+            thirdOptCol: "cyan",
+            fourthOptCol: "#3399ff"
         })
     }
 
@@ -51,28 +71,28 @@ class Fourth extends Component {
         return(
             <div className = "container text-center qs">
                 <div className="row justify-content-center align-items-center">
-                    <div className="col-8 col-sm-8">
+                    <div className="col-10 col-sm-8">
                         <h2 className="header">Which of the following do you have the most trouble dealing with?</h2>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptOne}>Hunger</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptOne} style={{backgroundColor: this.state.firstOptCol}}>Hunger</h3>
                     </div>
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptTwo}>Cold</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptTwo} style={{backgroundColor: this.state.secondOptCol}}>Cold</h3>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptThree}>Boredom</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptThree} style={{backgroundColor: this.state.thirdOptCol}}>Boredom</h3>
                     </div>
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptFour}>Loneliness</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptFour} style={{backgroundColor: this.state.fourthOptCol}}>Loneliness</h3>
                     </div>
                 </div>
                 <div className="text-center mt-50">
-                    <Link to={{pathname: "/fifth", state:{firstOpt: this.state.firstOptFourth, secondOpt: this.state.secondOptFourth, thirdOpt: this.state.thirdOptFourth, fourthOpt: this.state.fourthOpt}}}><Button outline color="success">Next Question</Button></Link>
+                    <Link to={{pathname: "/fifth", state:{firstOpt: this.state.firstOptFourth, secondOpt: this.state.secondOptFourth, thirdOpt: this.state.thirdOptFourth, fourthOpt: this.state.fourthOpt}}}><Button color="success">Next Question</Button></Link>
                 </div>
             </div>
         )

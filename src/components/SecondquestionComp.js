@@ -8,7 +8,11 @@ class Second extends Component {
         super(props)
         this.state = {
             secondOpt: "",
-            firstOptSec: this.props.location.state.firstOpt
+            firstOptSec: this.props.location.state.firstOpt,
+            firstOptCol: "cyan",
+            secondOptCol: "cyan",
+            thirdOptCol: "cyan",
+            fourthOptCol: "cyan"
         }
         this.selectOptTwo = this.selectOptTwo.bind(this)
         this.selectOptOne = this.selectOptOne.bind(this)
@@ -18,25 +22,41 @@ class Second extends Component {
 
     selectOptOne(){
         this.setState({
-            secondOpt: "Love"
+            secondOpt: "Love",
+            firstOptCol: "#3399ff",
+            secondOptCol: "cyan",
+            thirdOptCol: "cyan",
+            fourthOptCol: "cyan"
         })
     }
 
     selectOptTwo(){
         this.setState({
-            secondOpt: "Glory"
+            secondOpt: "Glory",
+            firstOptCol: "cyan",
+            secondOptCol: "#3399ff",
+            thirdOptCol: "cyan",
+            fourthOptCol: "cyan"
         })
     }
 
     selectOptThree(){
         this.setState({
-            secondOpt: "Wisdom"
+            secondOpt: "Wisdom",
+            firstOptCol: "cyan",
+            secondOptCol: "cyan",
+            thirdOptCol: "#3399ff",
+            fourthOptCol: "cyan"
         })
     }
 
     selectOptFour(){
         this.setState({
-            secondOpt: "Power"
+            secondOpt: "Power",
+            firstOptCol: "cyan",
+            secondOptCol: "cyan",
+            thirdOptCol: "cyan",
+            fourthOptCol: "#3399ff"
         })
     }
 
@@ -46,28 +66,28 @@ class Second extends Component {
         return(
             <div className = "container text-center qs">
                 <div className="row justify-content-center align-items-center">
-                    <div className="col-8 col-sm-8">
+                    <div className="col-10 col-sm-8">
                         <h2 className="header">If you could make a potion that would guarantee you one thing, what would it be? </h2>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptOne}>Love</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptOne} style={{backgroundColor: this.state.firstOptCol}}>Love</h3>
                     </div>
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptTwo}>Glory</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptTwo} style={{backgroundColor: this.state.secondOptCol}}>Glory</h3>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptThree}>Wisdom</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptThree} style={{backgroundColor: this.state.thirdOptCol}}>Wisdom</h3>
                     </div>
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptFour}>Power</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptFour} style={{backgroundColor: this.state.fourthOptCol}}>Power</h3>
                     </div>
                 </div>
                 <div className="text-center mt-50">
-                    <Link to={{pathname: "/third", state:{firstOpt: this.state.firstOptSec, secondOpt: this.state.secondOpt}}}><Button outline color="success">Next Question</Button></Link>
+                    <Link to={{pathname: "/third", state:{firstOpt: this.state.firstOptSec, secondOpt: this.state.secondOpt}}}><Button color="success">Next Question</Button></Link>
                 </div> 
             </div>
         )

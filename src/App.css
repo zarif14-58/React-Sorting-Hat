@@ -5,7 +5,7 @@
 .header{
     width: auto;
     height: auto;
-    background-color: blueviolet;
+    background-color: magenta;
 }
 
 .options{
@@ -17,4 +17,10 @@
 
 .options:hover{
     font-size: 30px;
+}
+
+.options_one{
+    width: auto;
+    height: auto;
+    background-color: cyan;
 }

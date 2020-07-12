@@ -19,7 +19,7 @@ class Gryf extends Component {
                 </div>
                 <div className="row justify-content-center align-items-center">
                     <div className="col-8 col-sm-8">
-                        <h2 className="lead options">"Where dwell the brave at heart, their daring, nerve and chivalry set Gryffindors apart."</h2>
+                        <h2 className="options_one">“Where dwell the brave at heart, their daring, nerve and chivalry set Gryffindors apart.”</h2>
                     </div>
                 </div>
             </div>

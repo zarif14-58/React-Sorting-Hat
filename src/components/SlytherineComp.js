@@ -19,7 +19,7 @@ class Slyt extends Component {
                 </div>
                 <div className="row justify-content-center align-items-center">
                     <div className="col-8 col-sm-8">
-                        <h2 className="lead options">“Or perhaps in Slytherin, You'll make your real friends, Those cunning folk use any means, To achieve their ends.”</h2>
+                        <h2 className="options_one">“Or perhaps in Slytherin, You'll make your real friends, Those cunning folk use any means, To achieve their ends.”</h2>
                     </div>
                 </div>
             </div>

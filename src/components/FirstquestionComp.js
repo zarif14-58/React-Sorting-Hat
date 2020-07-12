@@ -7,7 +7,11 @@ class First extends Component {
     constructor(props){
         super(props)
         this.state = {
-            firstOpt: ""
+            firstOpt: "",
+            firstOptCol: "cyan",
+            secondOptCol: "cyan",
+            thirdOptCol: "cyan",
+            fourthOptCol: "cyan"
         }
         this.selectOptTwo = this.selectOptTwo.bind(this)
         this.selectOptOne = this.selectOptOne.bind(this)
@@ -17,25 +21,41 @@ class First extends Component {
 
     selectOptOne(){
         this.setState({
-            firstOpt: "Ignorent"
+            firstOpt: "Ignorent",
+            firstOptCol: "#3399ff",
+            secondOptCol: "cyan",
+            thirdOptCol: "cyan",
+            fourthOptCol: "cyan"
         })
     }
 
     selectOptTwo(){
         this.setState({
-            firstOpt: "Cowerdly"
+            firstOpt: "Cowerdly",
+            firstOptCol: "cyan",
+            secondOptCol: "#3399ff",
+            thirdOptCol: "cyan",
+            fourthOptCol: "cyan"
         })
     }
 
     selectOptThree(){
         this.setState({
-            firstOpt: "Selfish"
+            firstOpt: "Selfish",
+            firstOptCol: "cyan",
+            secondOptCol: "cyan",
+            thirdOptCol: "#3399ff",
+            fourthOptCol: "cyan"
         })
     }
 
     selectOptFour(){
         this.setState({
-            firstOpt: "Ordinary"
+            firstOpt: "Ordinary",
+            firstOptCol: "cyan",
+            secondOptCol: "cyan",
+            thirdOptCol: "cyan",
+            fourthOptCol: "#3399ff"
         })
     }
 
@@ -44,28 +64,28 @@ class First extends Component {
         return(
             <div className = "container text-center qs">
                 <div className="row justify-content-center align-items-center">
-                    <div className="col-8 col-sm-8">
+                    <div className="col-10 col-sm-8">
                         <h2 className="header">What would you least liked to be called?</h2>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptOne}>Ignorant</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptOne} style={{backgroundColor: this.state.firstOptCol}}>Ignorant</h3>
                     </div>
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptTwo}>Cowardly</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptTwo} style={{backgroundColor: this.state.secondOptCol}}>Cowardly</h3>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptThree}>Selfish</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptThree} style={{backgroundColor: this.state.thirdOptCol}}>Selfish</h3>
                     </div>
-                    <div className="col-4 col-sm-4">
-                        <h3 className="options" onClick={this.selectOptFour}>Ordinary</h3>
+                    <div className="col-5 col-sm-4">
+                        <h3 className="options" onClick={this.selectOptFour} style={{backgroundColor: this.state.fourthOptCol}}>Ordinary</h3>
                     </div>
                 </div>
                 <div className="text-center mt-50">
-                    <Link to={{pathname: "/second", state:{firstOpt: this.state.firstOpt}}}><Button outline color="success">Next Question</Button></Link>
+                    <Link to={{pathname: "/second", state:{firstOpt: this.state.firstOpt}}}><Button color="success">Next Question</Button></Link>
                 </div> 
             </div>
         )

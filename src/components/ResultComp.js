@@ -25,27 +25,46 @@ class Result extends Component {
         const third = this.state.thirdOptRes
         const fourth = this.state.fourthOptRes
         const fifth = this.state.fifthOptRes
+        
+        console.log("from first comp res " + first)
+        console.log("from sec comp res " + second)
+        console.log("from third comp res " + third)
+        console.log("from fourth comp res " + fourth)
+        console.log("from fifth comp res " + fifth)
 
         let res
         if(first === "Ignorent" && second === "Wisdom" && third === "Piano" && fourth === "Cold" && fifth === "Dawn"){
             res = <Raven />
         }
-        if(first === "Cowardly" && second === "Glory" && third === "Drums" && fourth === "Boredom" && fifth === "Dawn"){
+        else if(first === "Cowerdly" && second === "Glory" && third === "Drums" && fourth === "Boredom" && fifth === "Dawn"){
             res = <Gryf />
         }
-        if(first === "Selfish" && second === "Love" && third === "Violin" && fourth === "Loneliness" && fifth === "Dawn"){
+        else if(first === "Selfish" && second === "Love" && third === "Violin" && fourth === "Loneliness" && fifth === "Dawn"){
             res = <Huff />
         }
-        if(first === "Ordinary" && second === "Power" && third === "Trumpet" && fourth === "Hunger" && fifth === "Dusk"){
+        else if(first === "Ordinary" && second === "Power" && third === "Trumpet" && fourth === "Hunger" && fifth === "Dusk"){
             res = <Slyt />
         }
+        else if(first === "Ignorent" && second === "Wisdom" && third === "Drums" && fourth === "Cold" && fifth === "Dusk"){
+            res = <Raven />
+        }
+        else if(first === "Cowerdly" && second === "Wisdom" && third === "Drums" && fourth === "Cold" && fifth === "Dawn"){
+            res = <Gryf />
+        }
+        else if(first === "Ignorent" && second === "Wisdom" && third === "Piano" && fourth === "Loneliness" && fifth === "Dusk"){
+            res = <Raven />
+        }
+        else{
+            res = <Gryf />
+        }
+
 
         return(
             <React.Fragment>
                 {res}
                 <div className="text-center">
                     <Link to="/">
-                        <Button outline color="success">Take The Quiz Again</Button>
+                        <Button color="success">Take The Quiz Again</Button>
                     </Link>
                 </div>
             </React.Fragment>
