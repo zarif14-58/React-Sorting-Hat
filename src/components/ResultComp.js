@@ -64,7 +64,18 @@ class Result extends Component {
             res = <Slyt />
         }
         else{
-            res = <Gryf />
+            if(first === "Ignorent"){
+                res = <Raven />
+            }
+            else if(first === "Cowerdly"){
+                res = <Gryf />
+            }
+            else if(first === "Ordinary"){
+                res = <Slyt />
+            }
+            else if(first === "Selfish"){
+                res = <Huff />
+            }
         }
 
 
