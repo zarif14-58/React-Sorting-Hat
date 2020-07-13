@@ -64,16 +64,16 @@ class Result extends Component {
             res = <Slyt />
         }
         else{
-            if(first === "Ignorent"){
+            if(second === "Wisdom"){
                 res = <Raven />
             }
-            else if(first === "Cowerdly"){
+            else if(second === "Glory"){
                 res = <Gryf />
             }
-            else if(first === "Ordinary"){
+            else if(second === "Power"){
                 res = <Slyt />
             }
-            else if(first === "Selfish"){
+            else if(second === "Love"){
                 res = <Huff />
             }
         }
