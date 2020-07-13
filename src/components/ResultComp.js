@@ -54,6 +54,15 @@ class Result extends Component {
         else if(first === "Ignorent" && second === "Wisdom" && third === "Piano" && fourth === "Loneliness" && fifth === "Dusk"){
             res = <Raven />
         }
+        else if(first === "Ordinary" && second === "Power" && third === "Drums" && fourth === "Hunger" && fifth === "Dusk"){
+            res = <Slyt />
+        }
+        else if(first === "Ordinary" && second === "Power" && third === "Trumpet" && fourth === "Hunger" && fifth === "Dawn"){
+            res = <Slyt />
+        }
+        else if(first === "Ordinary" && second === "Power" && third === "Trumpet" && fourth === "Boredom" && fifth === "Dusk"){
+            res = <Slyt />
+        }
         else{
             res = <Gryf />
         }
