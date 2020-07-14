@@ -14,7 +14,8 @@ class Fourth extends Component {
             firstOptCol: "cyan",
             secondOptCol: "cyan",
             thirdOptCol: "cyan",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: false
         }
         this.selectOptTwo = this.selectOptTwo.bind(this)
         this.selectOptOne = this.selectOptOne.bind(this)
@@ -28,7 +29,8 @@ class Fourth extends Component {
             firstOptCol: "#3399ff",
             secondOptCol: "cyan",
             thirdOptCol: "cyan",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -38,7 +40,8 @@ class Fourth extends Component {
             firstOptCol: "cyan",
             secondOptCol: "#3399ff",
             thirdOptCol: "cyan",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -48,7 +51,8 @@ class Fourth extends Component {
             firstOptCol: "cyan",
             secondOptCol: "cyan",
             thirdOptCol: "#3399ff",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -58,7 +62,8 @@ class Fourth extends Component {
             firstOptCol: "cyan",
             secondOptCol: "cyan",
             thirdOptCol: "cyan",
-            fourthOptCol: "#3399ff"
+            fourthOptCol: "#3399ff",
+            btn: true
         })
     }
 
@@ -68,6 +73,10 @@ class Fourth extends Component {
         console.log("from first comp " + this.state.firstOptFourth)
         console.log("from sec comp " + this.state.secondOptFourth)
         console.log("from third comp " + this.state.thirdOptFourth)
+        let button 
+        if(this.state.btn){
+            button = <Button color="success">Next Question</Button>
+        }
         return(
             <div className = "container text-center qs">
                 <div className="row justify-content-center align-items-center">
@@ -92,7 +101,7 @@ class Fourth extends Component {
                     </div>
                 </div>
                 <div className="text-center mt-50">
-                    <Link to={{pathname: "/fifth", state:{firstOpt: this.state.firstOptFourth, secondOpt: this.state.secondOptFourth, thirdOpt: this.state.thirdOptFourth, fourthOpt: this.state.fourthOpt}}}><Button color="success">Next Question</Button></Link>
+                    <Link to={{pathname: "/fifth", state:{firstOpt: this.state.firstOptFourth, secondOpt: this.state.secondOptFourth, thirdOpt: this.state.thirdOptFourth, fourthOpt: this.state.fourthOpt}}}>{button}</Link>
                 </div>
             </div>
         )

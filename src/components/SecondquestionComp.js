@@ -12,7 +12,8 @@ class Second extends Component {
             firstOptCol: "cyan",
             secondOptCol: "cyan",
             thirdOptCol: "cyan",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: false
         }
         this.selectOptTwo = this.selectOptTwo.bind(this)
         this.selectOptOne = this.selectOptOne.bind(this)
@@ -26,7 +27,8 @@ class Second extends Component {
             firstOptCol: "#3399ff",
             secondOptCol: "cyan",
             thirdOptCol: "cyan",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -36,7 +38,8 @@ class Second extends Component {
             firstOptCol: "cyan",
             secondOptCol: "#3399ff",
             thirdOptCol: "cyan",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -46,7 +49,8 @@ class Second extends Component {
             firstOptCol: "cyan",
             secondOptCol: "cyan",
             thirdOptCol: "#3399ff",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -56,13 +60,18 @@ class Second extends Component {
             firstOptCol: "cyan",
             secondOptCol: "cyan",
             thirdOptCol: "cyan",
-            fourthOptCol: "#3399ff"
+            fourthOptCol: "#3399ff",
+            btn: true
         })
     }
 
     render(){
         console.log(this.state.secondOpt)
         console.log("it fricking worked " + this.state.firstOptSec)
+        let button
+        if(this.state.btn){
+            button = <Button color="success">Next Question</Button>
+        }
         return(
             <div className = "container text-center qs">
                 <div className="row justify-content-center align-items-center">
@@ -87,7 +96,7 @@ class Second extends Component {
                     </div>
                 </div>
                 <div className="text-center mt-50">
-                    <Link to={{pathname: "/third", state:{firstOpt: this.state.firstOptSec, secondOpt: this.state.secondOpt}}}><Button color="success">Next Question</Button></Link>
+                    <Link to={{pathname: "/third", state:{firstOpt: this.state.firstOptSec, secondOpt: this.state.secondOpt}}}>{button}</Link>
                 </div> 
             </div>
         )

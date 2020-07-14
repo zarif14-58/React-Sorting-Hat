@@ -11,7 +11,8 @@ class First extends Component {
             firstOptCol: "cyan",
             secondOptCol: "cyan",
             thirdOptCol: "cyan",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: false
         }
         this.selectOptTwo = this.selectOptTwo.bind(this)
         this.selectOptOne = this.selectOptOne.bind(this)
@@ -25,7 +26,8 @@ class First extends Component {
             firstOptCol: "#3399ff",
             secondOptCol: "cyan",
             thirdOptCol: "cyan",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -35,7 +37,8 @@ class First extends Component {
             firstOptCol: "cyan",
             secondOptCol: "#3399ff",
             thirdOptCol: "cyan",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -45,7 +48,8 @@ class First extends Component {
             firstOptCol: "cyan",
             secondOptCol: "cyan",
             thirdOptCol: "#3399ff",
-            fourthOptCol: "cyan"
+            fourthOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -55,11 +59,16 @@ class First extends Component {
             firstOptCol: "cyan",
             secondOptCol: "cyan",
             thirdOptCol: "cyan",
-            fourthOptCol: "#3399ff"
+            fourthOptCol: "#3399ff",
+            btn: true
         })
     }
 
     render(){
+        let button
+        if(this.state.btn){
+            button = <Button color="success">Next Question</Button>
+        }
         console.log(this.state.firstOpt)
         return(
             <div className = "container text-center qs">
@@ -85,7 +94,7 @@ class First extends Component {
                     </div>
                 </div>
                 <div className="text-center mt-50">
-                    <Link to={{pathname: "/second", state:{firstOpt: this.state.firstOpt}}}><Button color="success">Next Question</Button></Link>
+                    <Link to={{pathname: "/second", state:{firstOpt: this.state.firstOpt}}}>{button}</Link>
                 </div> 
             </div>
         )

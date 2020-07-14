@@ -13,7 +13,8 @@ class Fifth extends Component {
             thirdOptFifth: this.props.location.state.thirdOpt,
             fourthOptFifth: this.props.location.state.fourthOpt,
             firstOptCol: "cyan",
-            secondOptCol: "cyan"
+            secondOptCol: "cyan",
+            btn: false
         }
         this.selectOptTwo = this.selectOptTwo.bind(this)
         this.selectOptOne = this.selectOptOne.bind(this)
@@ -23,7 +24,8 @@ class Fifth extends Component {
         this.setState({
             fifthOpt: "Dawn",
             firstOptCol: "#3399ff",
-            secondOptCol: "cyan"
+            secondOptCol: "cyan",
+            btn: true
         })
     }
 
@@ -31,7 +33,8 @@ class Fifth extends Component {
         this.setState({
             fifthOpt: "Dusk",
             firstOptCol: "cyan",
-            secondOptCol: "#3399ff"
+            secondOptCol: "#3399ff",
+            btn: true
         })
     }
 
@@ -42,6 +45,10 @@ class Fifth extends Component {
         console.log("from sec comp " + this.state.secondOptFifth)
         console.log("from third comp " + this.state.thirdOptFifth)
         console.log("from fourth comp " + this.state.fourthOptFifth)
+        let button 
+        if(this.state.btn){
+            button = <Button color="success">Get Your Result</Button>
+        }
         return(
             <div className = "container text-center qs">
                 <div className="row justify-content-center align-items-center">
@@ -58,7 +65,7 @@ class Fifth extends Component {
                     </div>
                 </div>
                 <div className="text-center mt-50">
-                    <Link to={{pathname: "/result", state:{firstOpt: this.state.firstOptFifth, secondOpt: this.state.secondOptFifth, thirdOpt: this.state.thirdOptFifth, fourthOpt: this.state.fourthOptFifth, fifthOpt: this.state.fifthOpt}}}><Button color="success">Get Your Result</Button></Link>
+                    <Link to={{pathname: "/result", state:{firstOpt: this.state.firstOptFifth, secondOpt: this.state.secondOptFifth, thirdOpt: this.state.thirdOptFifth, fourthOpt: this.state.fourthOptFifth, fifthOpt: this.state.fifthOpt}}}>{button}</Link>
                 </div>
             </div>
         )
