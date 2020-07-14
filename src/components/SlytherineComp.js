@@ -14,7 +14,7 @@ class Slyt extends Component {
             <div className = "container text-center qs">
                 <div className="row justify-content-center align-items-center">
                     <div className="col-8 col-sm-8">
-                        <h1 className="header">You got: Slytherine!</h1>
+                        <h1 className="header">You got: Slytherin!</h1>
                     </div>
                 </div>
                 <div className="row justify-content-center align-items-center">
